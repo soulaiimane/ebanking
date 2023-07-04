@@ -1,4 +1,5 @@
 package com.Soulaimane.ebankingbackent.dtos;
+import com.Soulaimane.ebankingbackent.entities.BankAccount;
 import com.Soulaimane.ebankingbackent.enums.OperationType;
 import lombok.Data;
 

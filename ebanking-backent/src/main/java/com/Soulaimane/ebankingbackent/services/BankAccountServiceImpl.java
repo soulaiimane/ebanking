@@ -227,6 +227,26 @@ public class BankAccountServiceImpl implements BankAccountService{
         return accountHistoryDto;
     }
 
+    @Override
+    public List<BankAccountDto> findBankAccountsByCustomerId(Long customerId) throws CustomerNotFoundExeption {
+        Customer customer=customerRepository.findById(customerId).orElse(null);
+        if (customer==null){
+            throw new CustomerNotFoundExeption("Customer Not Found");
+        }
+        List<BankAccount> bankAccounts = bankAccountRepository.findBankAccountsByCustomerId(customerId);
+
+        List<BankAccountDto> bankAccountsDtos = bankAccounts.stream().map(bankAccount -> {
+            if (bankAccount instanceof SavingAccount) {
+                return mapper.fromSavingBankAccount((SavingAccount) bankAccount);
+            } else {
+                return mapper.fromCurrentBankAccount((CurrentAccount) bankAccount);
+            }
+        }).collect(Collectors.toList());
+        return bankAccountsDtos;
+
+
+    }
+
     private BankAccount findBankAccount(String accountId) throws AccountNotFoundExeption {
         BankAccount bankAccount=bankAccountRepository.findById(accountId).orElseThrow(
                 ()->new AccountNotFoundExeption("Account Not Found"));

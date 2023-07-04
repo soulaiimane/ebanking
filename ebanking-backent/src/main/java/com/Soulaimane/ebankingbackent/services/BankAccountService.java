@@ -27,4 +27,5 @@ public interface BankAccountService {
 
 
     AccountHistoryDto gatAccountHistory(String accountId, int page, int size) throws AccountNotFoundExeption;
+    public List<BankAccountDto> findBankAccountsByCustomerId(Long id) throws CustomerNotFoundExeption;
 }

@@ -4,6 +4,7 @@ import com.Soulaimane.ebankingbackent.dtos.*;
 import com.Soulaimane.ebankingbackent.entities.AccountOperation;
 import com.Soulaimane.ebankingbackent.exeption.AccountNotFoundExeption;
 import com.Soulaimane.ebankingbackent.exeption.BalanceNotSufficientExeption;
+import com.Soulaimane.ebankingbackent.exeption.CustomerNotFoundExeption;
 import com.Soulaimane.ebankingbackent.services.BankAccountServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
@@ -52,7 +53,10 @@ public class BankAccountRestController {
     @PostMapping("/accounts/transfer")
     public void TransferRest(@RequestBody TransferDto transferDto) throws AccountNotFoundExeption, BalanceNotSufficientExeption {
         bankAccountService.transfer(transferDto.getSourceId(),transferDto.getDestinationId(),transferDto.getAmount());
-
+    }
+    @GetMapping("accounts/customer/{customerId}")
+    public List<BankAccountDto> findBankAccountsByCustomerIdRest(@PathVariable Long customerId) throws CustomerNotFoundExeption {
+        return bankAccountService.findBankAccountsByCustomerId(customerId);
     }
 
 }
