@@ -1,27 +1,39 @@
-# DigitalBankingWeb
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<H1  style="text-align:center"> E-Banking Web Application </H1>
+<H3>- Table Of All Customers</H3>
+<img src="Captures/allC.PNG" alt="error">
+<H3>- Search Customers </H3>
+<img src="Captures/sea.PNG" alt="error">
+<H3>- Add New Customer</H3>
+<img src="Captures/new.PNG" alt="error">
+<H3>- Save The New Customer </H3>
+<img src="Captures/save.PNG" alt="error">
+<H3>- Customer Added Successfully</H3>
+<img src="Captures/added.PNG" alt="error">
+<H3>- Delete Customer</H3>
+<img src="Captures/alert.PNG" alt="error">
+<H3>- Customer Deleted Successfully</H3>
+<img src="Captures/after.PNG" alt="error">
+<H3>- Visit Accounts Per Customer </H3>
+<img src="Captures/per.PNG" alt="error">
+<H3>- Accounts For Customer Number 4 </H3>
+<img src="Captures/acc.PNG" alt="error">
+<H3>- Visit Account</H3>
+<img src="Captures/vi.PNG" alt="error">
+<h2 style="text-align:center">- Do some Operations :</h2>
+<H3>- Before Debit</H3>
+<img src="Captures/b.PNG" alt="error">
+<H3 >- After Debit</H3>
+<img src="Captures/a.PNG" alt="error">
+<H3>- Before Credit</H3>
+<img src="Captures/bc.PNG" alt="error">
+<H3 >- After Credit</H3>
+<img src="Captures/ac.PNG" alt="error">
+<H3>- Before Transfer</H3>
+<img src="Captures/at.PNG" alt="error">
+<H3 >- After Transfer</H3>
+<img src="Captures/bt.PNG" alt="error">
+<H3 >- Pagination</H3>
+<img src="Captures/p.PNG" alt="error">
+<H3 >- We Can Also Visit Accounts Directly </H3>
+<img src="Captures/di.PNG" alt="error">
+<img src="Captures/diii.PNG" alt="error">
